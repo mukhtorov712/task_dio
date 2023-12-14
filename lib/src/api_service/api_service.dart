@@ -9,8 +9,6 @@ class ApiService {
 
   static const String _userDataUrl = 'https://crudcrud.com/api/a48e3800cea24694b37b8c6cf8bc1b14/users';
 
-  Future<Response<List<DataModel>>> fetchData() async => await dio.get<List<DataModel>>(_userDataUrl);
-
   Future<List<DataModel>?> fetchDataNew() async {
     try {
       var apiResponse = await dio.get(_userDataUrl);
